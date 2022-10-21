@@ -1,5 +1,5 @@
 import React from 'react';
-// import propTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 class Pokemon extends React.Component {
   render() {
@@ -10,7 +10,6 @@ class Pokemon extends React.Component {
         type,
         averageWeight: { value, measurementUnit },
         image,
-        moreInfo
       },
     } = this.props;
     return (
@@ -24,8 +23,15 @@ class Pokemon extends React.Component {
   }
 }
 
-// Pokemon.propTypes = {
-//   pokemon: propTypes.object.isRequired,
-// };
+Pokemon.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  pokemon: propTypes.object.isRequired,
+  // id: propTypes.string.isRequired,
+  // name: propTypes.string.isRequired,
+  // type: propTypes.string.isRequired,
+  // value: propTypes.string.isRequired,
+  // measurementUnit: propTypes.string.isRequired,
+  // image: propTypes.string.isRequired,
+};
 
 export default Pokemon;
